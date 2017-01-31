@@ -1,0 +1,92 @@
+=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=
+CIS 120 Game Project Proposal
+PennKey: ericlei
+=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=
+
+===============
+=: Your Game :=
+===============
+
+- What game are you planning to implement? If it is a game of your own design,
+  or not especially well-known, provide a 2-3 sentence description of the game.
+  I’m planning to implement Snake.
+
+- What classes and interfaces do you plan to create? How will the different
+  components of your game (the model, the GUI, etc.) interact?
+  I plan to create a Food class, and different food classes that will stem off of the 
+  parent food class and have different effects.  I will store the body of
+  snake itself in a collection (elaborated below).  The GUI will comprise of a score
+  system and a high score system, as well as a restart button.  I also plan on 
+  importing images, much like how it was implemented in Poison.java, in order to have 
+  different pictures for the different types of food.  There will be a model, like 
+  ServerModel.java, that will allow for JUnit testing of the different components of the 
+  game to ensure that the game’s functionality works.  I will stem off of Game.java and GameCourt.java
+  to build and implement the frame and game components.    
+  
+
+- What do you think will be the most challenging thing to implement?
+  I think the hardest part to implement would be to update each part of the body so that
+  it is in the right position whenever the snake moves.
+
+====================
+=: Core Concept 1 :=
+====================
+
+Concept 1: Modeling state using 2-D arrays or collections
+
+- What specific feature of your game will be implemented using this concept?
+  I will store the body of the snake in a LinkedList.
+
+- Why does it make sense to implement this feature with this concept? Justify
+  why this is a non-trivial application of the concept in question.
+  Using a LinkedList allows access to the head and tail of the snake, which makes it
+  easier to tell if the snake has eaten the food and it allows for easy access to 
+  add body parts to the tail.
+
+====================
+=: Core Concept 2 :=
+====================
+
+Concept 2: Inheritance and Subtyping
+
+- What specific feature of your game will be implemented using this concept?
+  I will have a parent food class that will allow for different effects on the snake for
+  different food items.
+
+- Why does it make sense to implement this feature with this concept? Justify
+  why this is a non-trivial application of the concept in question.
+  Every food will have some general properties that are inherited from the parent class.  
+  That way, I do not have to repeat code.
+
+
+====================
+=: Core Concept 3 :=
+====================
+
+Concept 3: Using I/O to parse a novel file format
+
+- What specific feature of your game will be implemented using this concept?
+  I plan to keep a high score table as well as a list as well as a scoring system 
+  that adds points whenever the snake eats a piece of food.
+ 
+- Why does it make sense to implement this feature with this concept? Justify
+  why this is a non-trivial application of the concept in question.
+  Using I/O allows for consistent way to store data persistently between runs of my game.
+
+====================
+=: Core Concept 4 :=
+====================
+
+Concept 4: Using JUnit to test some features of your model
+
+- What specific feature of your game will be implemented using this concept?
+  I will use JUnit to test different components of my game to make sure that they are
+  working properly.  For instance, I will test for the intended effects for when a snake
+  collides with a wall, piece of food or the snake’s body.  An example of an intended 
+  effect would be if a snake ate a piece of food, his body lengths should increase by 1.
+
+- Why does it make sense to implement this feature with this concept? Justify
+  why this is a non-trivial application of the concept in question.
+  Using a Model View Controller design will allow for testing that does not involve the
+  GUI and allows for an easy way to independently test each component of my game.
+
